@@ -12,6 +12,11 @@ pull in 3rd party JavaScript libraries. Free for anyone to use as long as they f
 licenses, use it as a starting point, or to learn how to integrate external Javascript Libraries more easily into your 
 WordPress theme.  
 
+### Build Instructions
+
+Read the file called [build instructions](https://github.com/GrahamCHill/wordpress-webpack-theme/blob/main/build-instructions.txt) 
+for detailed instructions.
+
 ### Credits
 The 3D model used is 
 [Just a girl](https://sketchfab.com/3d-models/just-a-girl-b2359160a4f54e76b5ae427a55d9594d) by 腱鞘炎の人 licensed under 
