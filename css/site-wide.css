@@ -1,0 +1,596 @@
+*{
+    --main-bg-color: #000000;
+    --main-text-color: #eceaea;
+    --main-link-color: #3a8f8f;
+    --main-lnk-color-alt: #77a6a6;
+    --main-link-hover-color: #344f57;
+    --main-text-hover-color: #eceaea;
+}
+html, p, h1, h2, h3, h4, h5, h6 {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+@media (min-width: 768px) {
+    .sitemap-container{
+        max-width: 900px;
+        padding: 1rem 1.5rem;
+    }
+}
+.sitemap-container h1, .sitemap-container h2,
+.sitemap-container h3, .sitemap-container h4,
+.sitemap-container h5, .sitemap-container h6,
+#page-content h1, #page-content h2,
+#page-content h3, #page-content h4,
+#page-content h5, #page-content h6 ,
+p, .entry-content, .entry-title,
+#primary h1, #primary h2,
+#primary h3, #primary h4,
+#primary h5, #primary h6,
+#primary p, time, label, span{
+    color: var(--main-text-color);
+}
+p, #primary p, ul, ol {
+    color: var(--main-text-color);
+    font-size: 1.2rem;
+    line-height: 1.3;
+    letter-spacing: 0.05em;
+}
+#copyright p, #Developer-Site p{
+    font-size: 0.9rem;
+}
+html a, #page-content a, #page-content a,
+html a:visited, #page-content a:visited, #page-content a:visited{
+    color: var(--main-lnk-color-alt);
+    text-decoration: none;
+}
+html a:visited, html a{
+    color: var(--main-text-color);
+}
+html a:hover, #page-content a:hover{
+    color: #386767;
+    transition: all 0.5s ease
+}
+
+.site-title{
+    font-size: 2.3rem;
+}
+.footer-link {
+    display: flex;
+    max-width: 150px;              /* Optional: Set a maximum width if needed */
+    text-align: center;            /* Center the text within the link */
+    padding: 10px 20px;            /* Add some padding for better appearance */
+    text-decoration: none;         /* Remove underline from links */
+}
+#site-map{
+    display: block;
+    align-content: center;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .site-title{
+        font-size: 1.7rem;
+    }
+    .footer-link ul{
+        display: flex;
+        align-content: center;
+        text-align: center;
+    }
+}
+@media (max-width: 540px) {
+    .site-title{
+        font-size: 1.4rem;
+    }
+    #other-links ul{
+        flex-direction: column;
+    }
+
+}
+@media (max-width: 492px) {
+    #main-header-content{
+        padding: 0 !important;
+        flex-wrap: inherit;
+    }
+    .navbar{
+        transform: scale(0.75);
+    }
+    .site-title{
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 992px) {
+    #navbarDesktop{
+        display: none;
+    }
+}
+#main-header-content{
+    width: 100vw;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+/* Header Customisations */
+
+.site-header{
+    position: fixed;
+    width: 100vw;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    z-index: 2;
+    background-color: var(--main-bg-color);
+    top: 0;
+}
+
+.burger-icon {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+}
+body {
+    background-color: var(--main-bg-color);
+}
+.burger-icon span {
+    background-color: var(--main-bg-color);
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.burger-icon span:nth-child(1) {
+    top: 0;
+}
+
+.burger-icon span:nth-child(2) {
+    top: 10px;
+}
+
+.burger-icon span:nth-child(3) {
+    top: 20px;
+}
+
+/* Animation when toggled */
+.navbar-toggler.collapsed .burger-icon span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.navbar-toggler.collapsed .burger-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggler.collapsed .burger-icon span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+}
+.burger-icon > span{
+    background-color: #ffffff;
+}
+button.navbar-toggler:hover  .burger-back, .navbar-toggler.collapsed .burger-icon span{
+    background-color: var(--main-link-hover-color);
+}
+.navbar-toggler{
+    border: none
+}
+/*-- Footer --*/
+footer #site-footer {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    bottom: -0.5rem;
+    text-align: center;
+    border-top: 4px solid var(--main-link-color);
+    font-size: 16px !important;
+    color: var(--main-text-color);
+    background-color: #000000;
+
+}
+#colophon{
+    bottom: 0;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    border-top: 4px solid var(--main-link-color);
+    font-size: 16px !important;
+    color: #ffffff;
+    background-color: #000000;
+}
+#Developer-Site{
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+#Developer-Site p{
+  padding-bottom: 0;
+    margin-bottom: 0;
+}
+#Developer-Site a{
+    color: var(--main-link-color);
+    font-size: 14px !important;
+    transition: color 0.5s ease;
+}
+#Developer-Site a:hover{
+    color: var(--main-link-hover-color);
+    transition: all 0.5s ease;
+}
+#copyright{
+    padding-top: 16px;
+}
+.image-link {
+    display: inline-block;
+    vertical-align: bottom;
+}
+.image-link img {
+    vertical-align: bottom;
+    transition: all 0.5s ease;
+    filter: grayscale(100%);
+    transform: scale(0.6);
+}
+.image-link img:hover {
+    vertical-align: bottom;
+    transition: all 0.5s ease;
+    filter: grayscale(0%);
+}
+
+/* Container for the search form */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.search-form{
+    display: flex;
+}
+
+/* Search input field */
+.search-form .search-field {
+    padding: 10px 15px;
+    border: 2px solid var(--main-link-color);;
+    border-right: none; /* Remove right border to make the button and input look connected */
+    border-radius: 50px 0 0 50px; /* Rounded on the left side */
+    outline: none;
+    font-size: 16px;
+    width: 160px; /* Adjust width as necessary */
+}
+
+/* Submit button */
+.search-form .search-submit {
+    padding: 10px 20px;
+    border: 2px solid var(--main-link-color);;
+    background-color: var(--main-link-color);
+    color: white;
+    font-size: 16px;
+    border-left: none; /* Remove left border to connect with the input */
+    border-radius: 0 50px 50px 0; /* Rounded on the right side */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+.search-submit:hover {
+    background-color: var(--main-link-hover-color);
+    border: 2px solid var(--main-link-color);;
+    transition: all 0.5s ease;
+}
+
+/* Optional: To make the search bar responsive */
+@media screen and (max-width: 600px) {
+    .search-form .search-field {
+        width: 100%;
+    }
+}
+
+.non-front{
+    justify-content: center;
+    display: grid;
+}
+article , section, .post-page{
+    padding: 1rem 1.5rem;
+}
+.post-page > *, .post-page .nav-links{
+    max-width: 900px;
+    display: initial;
+}
+#page-content{
+    padding: 1rem 1.5rem;
+}
+@media (min-width: 768px) {
+    article, #page-content, section{
+        max-width: 900px;
+    }
+}
+
+#masthead{
+    background: rgba(0, 0, 0, 0.42);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+#masthead > *{
+    padding: 1rem 2rem;
+}
+
+#site-links, #site-links a{
+    font-size: 24px;
+    color: var(--main-text-color); ;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+#site-links a:hover{
+    color: var(--main-link-hover-color);
+}
+
+#other-links ul {
+    display: flex;
+    justify-content: center;
+    list-style: none; /* Removes bullets or numbering */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+#other-links ul li {
+    padding: 0 16px;
+    margin-bottom: 10px; /* Adds space between list items */
+}
+
+.image-link img:hover{
+    border-radius: 100%;
+    background-color: #ffffff7a;
+}
+
+#other-links {
+    display: flex;                 /* Flexbox for horizontal layout */
+    justify-content: center;       /* Center the links in the footer */
+    gap: 20px;                     /* Adds space between the links */
+}
+
+#page-content{
+    position: relative;
+    z-index: 1;
+}
+#comments{
+    padding: 4%;
+}
+#filtered-posts{
+    max-width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    z-index: 1;
+    position: relative;
+    width: 100vw;
+    justify-content: center;
+}
+
+.entry-footer {
+    display: flex;
+    justify-content: flex-end; /* Aligns the button to the right */
+    margin-top: auto; /* Pushes the footer to the bottom of the article */
+}
+.form-submit{
+    justify-content: end;
+    display: flex;
+}
+.read-more-btn, .return-to-posts-btn, .form-submit input {
+    display: inline-block; /* Ensures the button is treated as a block for spacing */
+    padding: 10px 15px; /* Consistent padding */
+    background-color: #3a8f8f; /* Button color */
+    color: #fff; /* Text color */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+    height: 40px; /* Fixed height for uniformity */
+    line-height: 20px; /* Vertical centering */
+}
+
+.read-more-btn:hover, .return-to-posts-btn:hover, .form-submit:hover > * {
+    background-color: var(--main-link-hover-color); /* Darker shade on hover */
+    color: #7f7f80;
+}
+
+#post-section .entry-content{
+    display: -webkit-box;         /* Enable flexbox model */
+    -webkit-box-orient: vertical; /* Set orientation to vertical */
+    -webkit-line-clamp: 3;       /* Limit to 3 lines */
+    overflow: hidden;             /* Hide overflow text */
+    height: 6.5em;                /* Set height based on 3 lines (adjust line height if needed) */
+    min-height: 4.5em;
+    line-height: 1.5em;          /* Set line height */
+}
+.trimmed-content{
+    height: 4.5em;                /* Set height based on 3 lines (adjust line height if needed) */
+    min-height: 4.5em;
+    max-height: 4.5em;
+}
+
+.sitemap-links{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+}
+.sitemap-links li{
+    height: 48px;
+    padding: 8px 16px;
+    box-sizing: border-box; /* Ensure padding is included in width calculations */
+    width: calc(33.333% - 32px); /* 3 columns with space between */
+    margin-bottom: 16px; /* Add spacing between rows */
+}
+
+@media (max-width: 768px) {
+    .sitemap-links li {
+        width: 50%; /* Switch to 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .sitemap-links li {
+        width: 100%; /* Switch to 1 column on very small screens */
+    }
+}
+
+#post-filters{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+#post-filters > *{
+    padding: 4px 2rem;
+    min-width: calc(33.333% - 48px);
+}
+.post-filter-input{
+    width: 148px;
+}
+.post-filter-option{
+    display: flex;
+}
+#filter-container {
+    transition: all 0.3s ease; /* Smooth transition for showing/hiding */
+}
+
+.post, .type-post{
+    border: solid 1px white;
+    border-radius: 2rem;
+    width: calc(50vw - 10%);
+    background-color: rgba(80,80,80,0.8);
+    margin: 32px;
+}
+.post-page > *{
+    border: none ;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100vw;
+    margin-right: auto;
+    margin-left: auto;
+    display: inherit;
+}
+.post >* >*{
+    width:100%;
+}
+.post .entry-footer{
+    display: flex;
+    justify-content: flex-end;
+}
+.post .entry-footer a{
+    width: 12rem;
+    display: grid;
+    justify-content: space-around;
+    justify-items: end;
+}
+.post-page .post-page .entry-footer{
+    display: flex;
+    justify-content: space-between;
+}
+.post-object{
+    display: none;
+}
+
+/* Post container layout */
+.post-item {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 25rem;
+}
+
+/* Blurred background styling */
+.post-blurred-bg {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.post-image {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: auto;
+    height: 144px;
+    min-height: 40%;
+    max-height: 40%;
+    background-size: cover;
+    filter: blur(8px); /* Add the blur effect */
+    opacity: 0.6;
+    transition: 0.6s ease;
+}
+
+.post-image:hover{
+    filter: blur(2px);
+    transform: scale(1.1);
+    opacity: 0.5;
+    transition: 0.6s ease;
+
+}
+
+/* Post content section */
+.post-content {
+    height: 50%; /* Occupy the other half */
+    min-height: 50%;
+    max-height: 50%;
+    padding: 8px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(64,64,64);
+    z-index: 2;
+    position: relative;
+}
+
+.post-date {
+    font-size: 0.875em;
+    color: #666;
+    border-bottom: solid 1px white;
+}
+
+@media (max-width: 760px) {
+    .post-item{
+        height: 20rem
+    }
+    .post-image{
+        height: 72px;
+        min-height: 72px;
+    }
+}
+
+
+/* Search input field */
+.post-filter-input {
+    padding: 10px 15px !important;
+    border: 2px solid var(--main-link-color) !important;
+    border-right: none !important;
+    border-radius: 0 50px 50px 0 !important; /* Rounded on the left side */
+    outline: none;
+    font-size: 16px;
+    width: 160px; /* Adjust width as necessary */
+}
+.post-filter-label{
+    background-color: var(--main-link-color);
+    padding: 10px 15px;
+    border: 2px solid var(--main-link-color);;
+    border-right: none; /* Remove right border to make the button and input look connected */
+    border-radius: 50px 0 0 50px; /* Rounded on the left side */
+    outline: none;
+    font-size: 16px;
+}
